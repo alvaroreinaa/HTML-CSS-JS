@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Mukta:wght@300&display=swap');
+
+$title_font: 'Merriweather Sans', sans-serif;
+$content_font: 'Mukta', sans-serif;
+$layout_extra_small_devices: 576px;
+$layout_small_devices: 767px;
+$layout_large_devices: 768px;
+$layout_extra_large_devices: 1200px;
+
+@mixin mobile {
+    @media only screen and (max-width: #{$layout_extra_small_devices}) {
+        @content;
+    }
+}
+
+@mixin landscape-mobile{
+    @media only screen and (min-width: #{$layout_extra_small_devices}) and (max-width: #{$layout_small_devices}){
+        @content;
+    }
+}
+
+@mixin tablets{
+    @media only screen and (min-width: #{$layout_large_devices}) and (max-width: #{$layout_extra_large_devices}) {
+        @content;
+    }
+}
+
+@mixin desktop{
+    @media only screen and (min-width: #{$layout_extra_large_devices}){
+        @content;
+    }
+}
+
+%flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+%flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to { opacity: 1; }                  
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    @extend %flex-row;
+    text-align: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: rgb(245, 245, 245);
+
+    &__logo {
+        width: 60%;
+        height: 100%;
+
+        @include landscape-mobile {
+            width: 50%;
+        }
+
+        @include tablets {
+            width: 40%;
+        }
+
+        @include desktop {
+            width: 37.5%;
+        }
+
+        &--transition:hover {
+            cursor:pointer
+        }
+    }
+}
+
+.nav {
+    @extend %flex-row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+
+    &__menu {
+        font-family: $title_font;
+        color: black;
+        padding: 4px;
+        text-decoration: none;
+        font-size: 18px;
+        border-bottom: 2px solid transparent;
+        transition: border-bottom-color 0.5s ease-out;
+
+        @include landscape-mobile {
+            font-size: 20px;
+        }
+
+        @include tablets {
+            font-size: 22px;
+        }
+
+        @include desktop {
+            font-size: 24px;
+        }
+
+        &--transition:hover {
+            color:rgb(17, 176, 200);
+            border-bottom-color: rgb(17, 176, 200);
+            cursor: pointer;
+        }
+    }
+
+}
+
+.main {
+    flex: 1 0 auto;
+
+    &__view {
+        @extend %flex-column;
+        margin-bottom: 30px;
+
+        .main__welcome {
+            font-family: $title_font;
+            font-size: 20px;
+            text-align: center;
+            display: none;
+            opacity: 0;
+            animation: fadein 2s forwards;
+
+            @include landscape-mobile {
+                font-size: 22px;
+            }
+
+            @include tablets {
+                font-size: 24px;
+            }
+
+            @include desktop {
+                font-size: 26px;
+            }
+        }
+
+        .main__explanation {
+            font-family: $content_font;
+            font-size: 18px;
+            text-align: center;
+            margin-left: 5%;
+            margin-right: 5%;
+
+            @include landscape-mobile {
+                font-size: 20px;
+            }
+
+            @include tablets {
+                font-size: 22px;
+            }
+
+            @include desktop {
+                font-size: 24px;
+            }
+        }
+
+        .main__sections {
+            @extend %flex-row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-left: 5%;
+            margin-right: 5%;
+
+            .main__sections-heading {
+                font-family: $title_font;
+                font-size: 18px;
+
+                @include landscape-mobile {
+                    font-size: 20px;
+                }
+
+                @include tablets {
+                    font-size: 22px;
+                }
+
+                @include desktop {
+                    font-size: 24px;
+                }
+
+                &--transition:hover {
+                    color: rgb(17, 176, 200);
+                    cursor: pointer;
+                }
+            }
+            
+            .main__characters-information, .main__locations-information, .main__episodes-information {
+                font-family: $content_font;
+                font-size: 18px;
+                text-align: center;
+                display: none;
+
+                @include landscape-mobile {
+                    font-size: 20px;
+                }
+
+                @include tablets {
+                    font-size: 22px;
+                }
+
+                @include desktop {
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    &__characters, &__locations, &__episodes {
+        @extend %flex-row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        display: none;
+        margin-top: 30px;
+
+        .main__element {
+            @extend %flex-column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;           
+            padding-left: 5px;
+            padding-right: 5px;
+
+            .main__image {
+                height: 8rem;
+                width: 8rem; 
+                margin-left: 10px;
+                margin-right: 10px;
+
+                @include tablets {
+                    height: 9.5rem;
+                    width: 9.5rem;
+                }
+
+                @include desktop {
+                    height: 12.5rem;
+                    width: 12.5rem;
+                }
+
+                &--transition:hover {
+                    cursor: pointer;
+                }
+            }
+
+            .main__name {
+                font-family: $content_font;
+                font-size: 18px;
+                margin-top: 5px;
+                font-weight: bold;
+
+                @include landscape-mobile {
+                    font-size: 20px;
+                }
+
+                @include tablets {
+                    font-size: 22px;
+                }
+
+                @include desktop {
+                    font-size: 24px;
+                }
+
+                &--transition:hover {
+                    color: rgb(17, 176, 200);
+                    cursor: pointer;
+                }
+
+            }
+        }
+    }
+
+    &__detail {
+        @extend %flex-column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;  
+        display: none;
+        margin-bottom: 30px;
+
+        .main__header {
+            .main__detail-name {
+                font-family: $title_font;
+                font-size: 22px;
+                font-weight: bold;
+                margin-bottom: 15px;
+
+                @include tablets {
+                    font-size: 23px;
+                }
+
+                @include desktop {
+                    font-size: 24px;
+                }
+            }
+
+            .main__detail-image {
+                width: 90%;
+                height: 80%;
+                margin-bottom: 15px;
+
+                @include mobile {
+                    width: 80%;
+                    height: 70%;
+                }
+
+                @include tablets {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                @include desktop {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .main__description {
+            font-family: $content_font;
+            font-size: 19px;
+
+            @include tablets {
+                font-size: 21px;
+            }
+        
+            @include desktop {
+                font-size: 22px;
+            }
+
+            p {
+                margin: 0px;
+            }
+
+            span {
+                text-transform: capitalize;
+            }
+
+            .main__description-field {
+                font-weight: bold;
+            }
+
+        }
+    }
+}
+
+.footer {
+    @extend %flex-column;
+    align-items: center;
+    background-color: rgb(245, 245, 245);
+    flex-shrink: 0;
+    &__google-maps {
+        margin-top: 30px;
+        margin-bottom: 20px;
+        width: 65%;
+        height: 75%;
+        border: 0;
+
+        @include landscape-mobile {
+            width: 60%;
+        }
+
+        @include tablets {
+            width: 50%;
+        }
+
+        @include desktop {
+            width: 40%;
+        }
+
+    }
+
+    &__social-media {
+        @extend %flex-row;
+
+        .footer__logo {
+            text-decoration: none;
+            justify-content: space-between;
+            padding-left: 1rem;
+            padding-right: 1rem;            
+
+            @include landscape-mobile {
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;  
+            }
+
+            @include tablets {
+                padding-left: 2rem;
+                padding-right: 2rem;  
+            }
+
+            @include desktop {
+                padding-left: 3rem;
+                padding-right: 3rem;
+            }
+        }
+        
+        .fab {
+            color: black;
+            font-size: 1.75rem;
+
+            @include landscape-mobile {
+                font-size: 2.1rem;
+            }
+
+            @include tablets {
+                font-size: 2.45rem;
+            }
+
+            @include desktop {
+                font-size: 2.65rem;
+            }
+        }
+    }
+
+    &__author {
+        font-family: $content_font;
+        font-size: 14.5px;
+        font-style: italic;
+
+        @include landscape-mobile {
+            font-size: 15.5px;
+        }
+
+        @include tablets {
+            font-size: 16.5px;
+        }
+
+        @include desktop {
+            font-size: 17.5px;
+        }
+    }
+    
+}
+

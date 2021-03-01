@@ -1,0 +1,537 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Mukta:wght@300&display=swap");
+.header, .nav, .main__view .main__sections, .main__characters, .main__locations, .main__episodes, .footer__social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.main__view, .main__characters .main__element, .main__locations .main__element, .main__episodes .main__element, .main__detail, .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px;
+  background-color: whitesmoke;
+}
+
+.header__logo {
+  width: 60%;
+  height: 100%;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .header__logo {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .header__logo {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .header__logo {
+    width: 37.5%;
+  }
+}
+
+.header__logo--transition:hover {
+  cursor: pointer;
+}
+
+.nav {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.nav__menu {
+  font-family: "Merriweather Sans", sans-serif;
+  color: black;
+  padding: 4px;
+  text-decoration: none;
+  font-size: 18px;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom-color 0.5s ease-out;
+  transition: border-bottom-color 0.5s ease-out;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .nav__menu {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .nav__menu {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .nav__menu {
+    font-size: 24px;
+  }
+}
+
+.nav__menu--transition:hover {
+  color: #11b0c8;
+  border-bottom-color: #11b0c8;
+  cursor: pointer;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.main__view {
+  margin-bottom: 30px;
+}
+
+.main__view .main__welcome {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 20px;
+  text-align: center;
+  display: none;
+  opacity: 0;
+  -webkit-animation: fadein 2s forwards;
+          animation: fadein 2s forwards;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .main__view .main__welcome {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__view .main__welcome {
+    font-size: 24px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__view .main__welcome {
+    font-size: 26px;
+  }
+}
+
+.main__view .main__explanation {
+  font-family: "Mukta", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .main__view .main__explanation {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__view .main__explanation {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__view .main__explanation {
+    font-size: 24px;
+  }
+}
+
+.main__view .main__sections {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.main__view .main__sections .main__sections-heading {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .main__view .main__sections .main__sections-heading {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__view .main__sections .main__sections-heading {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__view .main__sections .main__sections-heading {
+    font-size: 24px;
+  }
+}
+
+.main__view .main__sections .main__sections-heading--transition:hover {
+  color: #11b0c8;
+  cursor: pointer;
+}
+
+.main__view .main__sections .main__characters-information, .main__view .main__sections .main__locations-information, .main__view .main__sections .main__episodes-information {
+  font-family: "Mukta", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  display: none;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .main__view .main__sections .main__characters-information, .main__view .main__sections .main__locations-information, .main__view .main__sections .main__episodes-information {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__view .main__sections .main__characters-information, .main__view .main__sections .main__locations-information, .main__view .main__sections .main__episodes-information {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__view .main__sections .main__characters-information, .main__view .main__sections .main__locations-information, .main__view .main__sections .main__episodes-information {
+    font-size: 24px;
+  }
+}
+
+.main__characters, .main__locations, .main__episodes {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  display: none;
+  margin-top: 30px;
+}
+
+.main__characters .main__element, .main__locations .main__element, .main__episodes .main__element {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.main__characters .main__element .main__image, .main__locations .main__element .main__image, .main__episodes .main__element .main__image {
+  height: 8rem;
+  width: 8rem;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__characters .main__element .main__image, .main__locations .main__element .main__image, .main__episodes .main__element .main__image {
+    height: 9.5rem;
+    width: 9.5rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__characters .main__element .main__image, .main__locations .main__element .main__image, .main__episodes .main__element .main__image {
+    height: 12.5rem;
+    width: 12.5rem;
+  }
+}
+
+.main__characters .main__element .main__image--transition:hover, .main__locations .main__element .main__image--transition:hover, .main__episodes .main__element .main__image--transition:hover {
+  cursor: pointer;
+}
+
+.main__characters .main__element .main__name, .main__locations .main__element .main__name, .main__episodes .main__element .main__name {
+  font-family: "Mukta", sans-serif;
+  font-size: 18px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .main__characters .main__element .main__name, .main__locations .main__element .main__name, .main__episodes .main__element .main__name {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__characters .main__element .main__name, .main__locations .main__element .main__name, .main__episodes .main__element .main__name {
+    font-size: 22px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__characters .main__element .main__name, .main__locations .main__element .main__name, .main__episodes .main__element .main__name {
+    font-size: 24px;
+  }
+}
+
+.main__characters .main__element .main__name--transition:hover, .main__locations .main__element .main__name--transition:hover, .main__episodes .main__element .main__name--transition:hover {
+  color: #11b0c8;
+  cursor: pointer;
+}
+
+.main__detail {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  display: none;
+  margin-bottom: 30px;
+}
+
+.main__detail .main__header .main__detail-name {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__detail .main__header .main__detail-name {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__detail .main__header .main__detail-name {
+    font-size: 24px;
+  }
+}
+
+.main__detail .main__header .main__detail-image {
+  width: 90%;
+  height: 80%;
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 576px) {
+  .main__detail .main__header .main__detail-image {
+    width: 80%;
+    height: 70%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__detail .main__header .main__detail-image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__detail .main__header .main__detail-image {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.main__detail .main__description {
+  font-family: "Mukta", sans-serif;
+  font-size: 19px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .main__detail .main__description {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .main__detail .main__description {
+    font-size: 22px;
+  }
+}
+
+.main__detail .main__description p {
+  margin: 0px;
+}
+
+.main__detail .main__description span {
+  text-transform: capitalize;
+}
+
+.main__detail .main__description .main__description-field {
+  font-weight: bold;
+}
+
+.footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: whitesmoke;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+.footer__google-maps {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  width: 65%;
+  height: 75%;
+  border: 0;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .footer__google-maps {
+    width: 60%;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer__google-maps {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer__google-maps {
+    width: 40%;
+  }
+}
+
+.footer__social-media .footer__logo {
+  text-decoration: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .footer__social-media .footer__logo {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer__social-media .footer__logo {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer__social-media .footer__logo {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+}
+
+.footer__social-media .fab {
+  color: black;
+  font-size: 1.75rem;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .footer__social-media .fab {
+    font-size: 2.1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer__social-media .fab {
+    font-size: 2.45rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer__social-media .fab {
+    font-size: 2.65rem;
+  }
+}
+
+.footer__author {
+  font-family: "Mukta", sans-serif;
+  font-size: 14.5px;
+  font-style: italic;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .footer__author {
+    font-size: 15.5px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer__author {
+    font-size: 16.5px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer__author {
+    font-size: 17.5px;
+  }
+}
+/*# sourceMappingURL=main.css.map */

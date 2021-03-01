@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <![endif]-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title> Rick and Morty </title>
+        <meta name="description" content="Rick and Morty Project Website">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+        <link rel="icon" type="image/svg" href="img/Rick-and-Morty-Logo.svg"/>
+        <script src="js/index.js"></script>
+        <script src="js/list.js"></script>
+        <script src="js/detail.js"></script>
+        <script src="js/info.js"></script>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header class="header">
+            <a href='#view' id='view_logo'>
+                <img class="header__logo header__logo--transition" src="img/Rick-and-Morty-Logo.svg" alt="Rick and Morty Logo">
+            </a>
+        </header>
+
+        <nav class="nav">
+            <a class="nav__menu nav__menu--transition" href='#character' id='characters_menu'> Characters </a>
+            <a class="nav__menu nav__menu--transition" href='#location' id='locations_menu'> Locations </a>
+            <a class="nav__menu nav__menu--transition" href='#episode' id='episodes_menu'> Episodes </a>
+        </nav>
+
+        <main class="main">
+            <div class="main__view" id="view">
+                <h2 class="main__welcome"> Bienvenido/a Wubba Lubba Dub Dub </h2>
+                <p class="main__explanation"> 
+                    This page is about the best show on earth, Rick and Morty! We are not affiliated with Rick and Morty or Adult Swim. 
+                    In this page you will find the different characters, locations and episodes of the series.
+                    In addition, you will be able to see in detail each one of them.
+                </p>
+
+                <div class="main__sections">
+                    <div>
+                        <h3 class="main__sections-heading main__sections-heading--transition" id='characters_info'> About Characters </h3>
+                        <span class="main__characters-information"> 
+                            In this section you will see the name and image of the characters of the series.If you click on it, 
+                            you will see a brief description of it: status, species, type and gender.
+                        </span>
+                    </div>
+
+                    <div>
+                        <h3 class="main__sections-heading main__sections-heading--transition" id='locations_info'> About Locations </h3>
+                        <span class="main__locations-information"> 
+                            In this section you will see the name of the series locations.If you click on it, 
+                            you will see a brief description of it: type and dimension.
+                        </span>
+                    </div>
+
+                    <div>
+                        <h3 class="main__sections-heading main__sections-heading--transition" id='episodes_info'> About Episodes </h3>
+                        <span class="main__episodes-information">
+                            In this section you will see the name of a episodes of the series.
+                            If you click on it, you will see a brief description of it: episode and air date.
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="main__characters" id="character">
+
+            </div>
+
+            <div class="main__locations" id="location">
+
+            </div>
+
+            <div class="main__episodes" id="episode">
+
+            </div>
+
+            <div class="main__detail" id="detail">
+
+            </div>
+        </main>
+
+        <footer class="footer">
+            <iframe class="footer__google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11106.122830260005!2d-118.34554611689215!3d34.14966603972237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bfc91b7bf323%3A0x16d1cd7dc89a5826!2sWarner%20Bros.%20Studios%2C%20Burbank%2C%20California%2C%20EE.%20UU.!5e0!3m2!1ses!2ses!4v1613395109543!5m2!1ses!2ses" 
+            style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+            <div class="footer__social-media">
+                <a class="footer__logo" href="https://www.facebook.com/RickandMorty/">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+                <a class="footer__logo" href="https://www.instagram.com/rickandmorty/">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a class="footer__logo" href="https://twitter.com/rickandmorty">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+                <a class="footer__logo" href="https://www.reddit.com/r/rickandmorty/">
+                    <i class="fab fa-reddit-square"></i>
+                </a>
+            </div>
+
+            <p class="footer__author"> Web Made by Alvaro Reina </p>
+        </footer>
+    </body>
+</html>
