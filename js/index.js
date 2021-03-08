@@ -5,11 +5,14 @@ if(!location.hash || (performance.type == performance.TYPE_RELOAD)) {
     location.hash = "#view";
 }
 
+// Tieme setTimeout (in ms)
+const WELCOME_DELAY = 2000;
+
 // Function that welcome the user after two seconds in the first access 
 function welcomeInTwoSeconds() {
     setTimeout( () => {
         document.getElementsByClassName('main__welcome')[0].style.display = 'block';
-    },2000);
+    },WELCOME_DELAY);
 }
 
 // Function that display information of the different sections 

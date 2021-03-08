@@ -1,23 +1,9 @@
-// Function that returns the fields of the description according to the section
-function getDescriptionFields(section) {
-    let fields; 
-
-    switch (section) {
-        case 'character':
-            fields = ['status', 'species', 'type', 'gender'];
-            break;
-        case 'location':
-            fields = ['type', 'dimension'];
-            break;
-        case 'episode':
-            fields = ['episode', 'air_date'];
-            break;
-        default:
-            break;
-    }
-
-    return fields;
-}
+// Const that have the fields of the description according to the section
+const descriptionFields = {
+    character: ['status', 'species', 'type', 'gender'],
+    location: ['type', 'dimension'],
+    episode: ['episode', 'air_date']
+};
 
 // Function that shows in detail the selected element
 function printDetailData(element, section) {
@@ -50,26 +36,23 @@ function printDetailData(element, section) {
 
     // Insert the elements in his corresponding parent
     main_detail.appendChild(main_header);
-
-    // Depending on the section, we have different fields with their respective formats
-    let description_fields = getDescriptionFields(section);
-   
+  
     // Foreach file of the element
-    for (let index = 0; index < description_fields.length; index++) {
+    for (let index = 0; index < descriptionFields[section].length; index++) {
         // Create his container
         let paragraph = document.createElement('p');
 
         // We create his field with his information
         let field = document.createElement('span');
         field.setAttribute('class','main__description-field');
-        field.innerHTML = description_fields[index] + ': ';
+        field.innerHTML = descriptionFields[section][index] + ': ';
 
         let information = document.createElement('span');
 
-        if (element[description_fields[index]].length == 0) {
+        if (element[descriptionFields[section][index]].length == 0) {
             information.innerHTML = 'Unknown';
         } else {
-            information.innerHTML = element[description_fields[index]];
+            information.innerHTML = element[descriptionFields[section][index]];
         }
         
         // Insert the elements in his corresponding parent
