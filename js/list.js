@@ -54,5 +54,3 @@ function printData(data, section) {
         alert('Sorry, there is no data to show!')
     }
 }
-
-

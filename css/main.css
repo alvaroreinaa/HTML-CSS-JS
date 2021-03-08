@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Mukta:wght@300&display=swap");
-.header, .nav, .main__view .main__sections, .main__characters, .main__locations, .main__episodes, .footer__social-media {
+.header, .nav, .main__sections, .main__characters, .main__locations, .main__episodes, .footer__social-media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,7 +9,7 @@
           flex-direction: row;
 }
 
-.main__view, .main__characters .main__element, .main__locations .main__element, .main__episodes .main__element, .main__detail, .footer {
+.main__view, .main__element, .main__detail, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,7 +144,7 @@ body {
   margin-bottom: 30px;
 }
 
-.main__view .main__welcome {
+.main__welcome {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 20px;
   text-align: center;
@@ -155,24 +155,24 @@ body {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .main__view .main__welcome {
+  .main__welcome {
     font-size: 22px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .main__view .main__welcome {
+  .main__welcome {
     font-size: 24px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main__view .main__welcome {
+  .main__welcome {
     font-size: 26px;
   }
 }
 
-.main__view .main__explanation {
+.main__explanation {
   font-family: "Mukta", sans-serif;
   font-size: 18px;
   text-align: center;
@@ -181,24 +181,24 @@ body {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .main__view .main__explanation {
+  .main__explanation {
     font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .main__view .main__explanation {
+  .main__explanation {
     font-size: 22px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main__view .main__explanation {
+  .main__explanation {
     font-size: 24px;
   }
 }
 
-.main__view .main__sections {
+.main__sections {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: distribute;
@@ -207,35 +207,35 @@ body {
   margin-right: 5%;
 }
 
-.main__view .main__sections .main__sections-heading {
+.main__sections-heading {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 18px;
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .main__view .main__sections .main__sections-heading {
+  .main__sections-heading {
     font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .main__view .main__sections .main__sections-heading {
+  .main__sections-heading {
     font-size: 22px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main__view .main__sections .main__sections-heading {
+  .main__sections-heading {
     font-size: 24px;
   }
 }
 
-.main__view .main__sections .main__sections-heading--transition:hover {
+.main__sections-heading--transition:hover {
   color: #11b0c8;
   cursor: pointer;
 }
 
-.main__view .main__sections .main__characters-information, .main__view .main__sections .main__locations-information, .main__view .main__sections .main__episodes-information {
+.main__characters-information, .main__locations-information, .main__episodes-information {
   font-family: "Mukta", sans-serif;
   font-size: 18px;
   text-align: center;
@@ -243,19 +243,19 @@ body {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .main__view .main__sections .main__characters-information, .main__view .main__sections .main__locations-information, .main__view .main__sections .main__episodes-information {
+  .main__characters-information, .main__locations-information, .main__episodes-information {
     font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .main__view .main__sections .main__characters-information, .main__view .main__sections .main__locations-information, .main__view .main__sections .main__episodes-information {
+  .main__characters-information, .main__locations-information, .main__episodes-information {
     font-size: 22px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main__view .main__sections .main__characters-information, .main__view .main__sections .main__locations-information, .main__view .main__sections .main__episodes-information {
+  .main__characters-information, .main__locations-information, .main__episodes-information {
     font-size: 24px;
   }
 }
@@ -269,7 +269,7 @@ body {
   margin-top: 30px;
 }
 
-.main__characters .main__element, .main__locations .main__element, .main__episodes .main__element {
+.main__element {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -281,7 +281,7 @@ body {
   padding-right: 5px;
 }
 
-.main__characters .main__element .main__image, .main__locations .main__element .main__image, .main__episodes .main__element .main__image {
+.main__image {
   height: 8rem;
   width: 8rem;
   margin-left: 10px;
@@ -289,24 +289,24 @@ body {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .main__characters .main__element .main__image, .main__locations .main__element .main__image, .main__episodes .main__element .main__image {
+  .main__image {
     height: 9.5rem;
     width: 9.5rem;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main__characters .main__element .main__image, .main__locations .main__element .main__image, .main__episodes .main__element .main__image {
+  .main__image {
     height: 12.5rem;
     width: 12.5rem;
   }
 }
 
-.main__characters .main__element .main__image--transition:hover, .main__locations .main__element .main__image--transition:hover, .main__episodes .main__element .main__image--transition:hover {
+.main__image--transition:hover {
   cursor: pointer;
 }
 
-.main__characters .main__element .main__name, .main__locations .main__element .main__name, .main__episodes .main__element .main__name {
+.main__name {
   font-family: "Mukta", sans-serif;
   font-size: 18px;
   margin-top: 5px;
@@ -314,24 +314,24 @@ body {
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-  .main__characters .main__element .main__name, .main__locations .main__element .main__name, .main__episodes .main__element .main__name {
+  .main__name {
     font-size: 20px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .main__characters .main__element .main__name, .main__locations .main__element .main__name, .main__episodes .main__element .main__name {
+  .main__name {
     font-size: 22px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main__characters .main__element .main__name, .main__locations .main__element .main__name, .main__episodes .main__element .main__name {
+  .main__name {
     font-size: 24px;
   }
 }
 
-.main__characters .main__element .main__name--transition:hover, .main__locations .main__element .main__name--transition:hover, .main__episodes .main__element .main__name--transition:hover {
+.main__name--transition:hover {
   color: #11b0c8;
   cursor: pointer;
 }
@@ -348,7 +348,7 @@ body {
   margin-bottom: 30px;
 }
 
-.main__detail .main__header .main__detail-name {
+.main__detail-name {
   font-family: "Merriweather Sans", sans-serif;
   font-size: 22px;
   font-weight: bold;
@@ -356,70 +356,70 @@ body {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .main__detail .main__header .main__detail-name {
+  .main__detail-name {
     font-size: 23px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main__detail .main__header .main__detail-name {
+  .main__detail-name {
     font-size: 24px;
   }
 }
 
-.main__detail .main__header .main__detail-image {
+.main__detail-image {
   width: 90%;
   height: 80%;
   margin-bottom: 15px;
 }
 
 @media only screen and (max-width: 576px) {
-  .main__detail .main__header .main__detail-image {
+  .main__detail-image {
     width: 80%;
     height: 70%;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .main__detail .main__header .main__detail-image {
+  .main__detail-image {
     width: 100%;
     height: 100%;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main__detail .main__header .main__detail-image {
+  .main__detail-image {
     width: 100%;
     height: 100%;
   }
 }
 
-.main__detail .main__description {
+.main__description {
   font-family: "Mukta", sans-serif;
   font-size: 19px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .main__detail .main__description {
+  .main__description {
     font-size: 21px;
   }
 }
 
 @media only screen and (min-width: 1200px) {
-  .main__detail .main__description {
+  .main__description {
     font-size: 22px;
   }
 }
 
-.main__detail .main__description p {
+.main__description p {
   margin: 0px;
 }
 
-.main__detail .main__description span {
+.main__description span {
   text-transform: capitalize;
 }
 
-.main__detail .main__description .main__description-field {
+.main__description-field {
   font-weight: bold;
 }
 
@@ -458,36 +458,6 @@ body {
   }
 }
 
-.footer__social-media .footer__logo {
-  text-decoration: none;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .footer__social-media .footer__logo {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-  }
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1200px) {
-  .footer__social-media .footer__logo {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-}
-
-@media only screen and (min-width: 1200px) {
-  .footer__social-media .footer__logo {
-    padding-left: 3rem;
-    padding-right: 3rem;
-  }
-}
-
 .footer__social-media .fab {
   color: black;
   font-size: 1.75rem;
@@ -508,6 +478,36 @@ body {
 @media only screen and (min-width: 1200px) {
   .footer__social-media .fab {
     font-size: 2.65rem;
+  }
+}
+
+.footer__logo {
+  text-decoration: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .footer__logo {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1200px) {
+  .footer__logo {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .footer__logo {
+    padding-left: 3rem;
+    padding-right: 3rem;
   }
 }
 

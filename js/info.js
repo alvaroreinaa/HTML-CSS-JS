@@ -9,4 +9,3 @@ function getData(section, printData) {
             printData(data, section);
         }); 
 }
-

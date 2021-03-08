@@ -130,95 +130,95 @@ body {
     &__view {
         @extend %flex-column;
         margin-bottom: 30px;
+    }
 
-        .main__welcome {
-            font-family: $title_font;
+    &__welcome {
+        font-family: $title_font;
+        font-size: 20px;
+        text-align: center;
+        display: none;
+        opacity: 0;
+        animation: fadein 2s forwards;
+
+        @include landscape-mobile {
+            font-size: 22px;
+        }
+
+        @include tablets {
+            font-size: 24px;
+        }
+
+        @include desktop {
+            font-size: 26px;
+        }
+    }
+
+    &__explanation {
+        font-family: $content_font;
+        font-size: 18px;
+        text-align: center;
+        margin-left: 5%;
+        margin-right: 5%;
+
+        @include landscape-mobile {
             font-size: 20px;
-            text-align: center;
-            display: none;
-            opacity: 0;
-            animation: fadein 2s forwards;
-
-            @include landscape-mobile {
-                font-size: 22px;
-            }
-
-            @include tablets {
-                font-size: 24px;
-            }
-
-            @include desktop {
-                font-size: 26px;
-            }
         }
 
-        .main__explanation {
-            font-family: $content_font;
-            font-size: 18px;
-            text-align: center;
-            margin-left: 5%;
-            margin-right: 5%;
-
-            @include landscape-mobile {
-                font-size: 20px;
-            }
-
-            @include tablets {
-                font-size: 22px;
-            }
-
-            @include desktop {
-                font-size: 24px;
-            }
+        @include tablets {
+            font-size: 22px;
         }
 
-        .main__sections {
-            @extend %flex-row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin-left: 5%;
-            margin-right: 5%;
+        @include desktop {
+            font-size: 24px;
+        }
+    }
 
-            .main__sections-heading {
-                font-family: $title_font;
-                font-size: 18px;
+    &__sections {
+        @extend %flex-row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 
-                @include landscape-mobile {
-                    font-size: 20px;
-                }
+    &__sections-heading {
+        font-family: $title_font;
+        font-size: 18px;
 
-                @include tablets {
-                    font-size: 22px;
-                }
+        @include landscape-mobile {
+            font-size: 20px;
+        }
 
-                @include desktop {
-                    font-size: 24px;
-                }
+        @include tablets {
+            font-size: 22px;
+        }
 
-                &--transition:hover {
-                    color: rgb(17, 176, 200);
-                    cursor: pointer;
-                }
-            }
-            
-            .main__characters-information, .main__locations-information, .main__episodes-information {
-                font-family: $content_font;
-                font-size: 18px;
-                text-align: center;
-                display: none;
+        @include desktop {
+            font-size: 24px;
+        }
 
-                @include landscape-mobile {
-                    font-size: 20px;
-                }
+        &--transition:hover {
+            color: rgb(17, 176, 200);
+            cursor: pointer;
+        }
+    }
+    
+    &__characters-information, &__locations-information, &__episodes-information {
+        font-family: $content_font;
+        font-size: 18px;
+        text-align: center;
+        display: none;
 
-                @include tablets {
-                    font-size: 22px;
-                }
+        @include landscape-mobile {
+            font-size: 20px;
+        }
 
-                @include desktop {
-                    font-size: 24px;
-                }
-            }
+        @include tablets {
+            font-size: 22px;
+        }
+
+        @include desktop {
+            font-size: 24px;
         }
     }
 
@@ -228,60 +228,59 @@ body {
         justify-content: space-around;
         display: none;
         margin-top: 30px;
+    }
 
-        .main__element {
-            @extend %flex-column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;           
-            padding-left: 5px;
-            padding-right: 5px;
+    &__element {
+        @extend %flex-column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;           
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 
-            .main__image {
-                height: 8rem;
-                width: 8rem; 
-                margin-left: 10px;
-                margin-right: 10px;
+    &__image {
+        height: 8rem;
+        width: 8rem; 
+        margin-left: 10px;
+        margin-right: 10px;
 
-                @include tablets {
-                    height: 9.5rem;
-                    width: 9.5rem;
-                }
+        @include tablets {
+            height: 9.5rem;
+            width: 9.5rem;
+        }
 
-                @include desktop {
-                    height: 12.5rem;
-                    width: 12.5rem;
-                }
+        @include desktop {
+            height: 12.5rem;
+            width: 12.5rem;
+        }
 
-                &--transition:hover {
-                    cursor: pointer;
-                }
-            }
+        &--transition:hover {
+            cursor: pointer;
+        }
+    }
 
-            .main__name {
-                font-family: $content_font;
-                font-size: 18px;
-                margin-top: 5px;
-                font-weight: bold;
+    &__name {
+        font-family: $content_font;
+        font-size: 18px;
+        margin-top: 5px;
+        font-weight: bold;
 
-                @include landscape-mobile {
-                    font-size: 20px;
-                }
+        @include landscape-mobile {
+            font-size: 20px;
+        }
 
-                @include tablets {
-                    font-size: 22px;
-                }
+        @include tablets {
+            font-size: 22px;
+        }
 
-                @include desktop {
-                    font-size: 24px;
-                }
+        @include desktop {
+            font-size: 24px;
+        }
 
-                &--transition:hover {
-                    color: rgb(17, 176, 200);
-                    cursor: pointer;
-                }
-
-            }
+        &--transition:hover {
+            color: rgb(17, 176, 200);
+            cursor: pointer;
         }
     }
 
@@ -292,70 +291,67 @@ body {
         text-align: center;  
         display: none;
         margin-bottom: 30px;
+    }
 
-        .main__header {
-            .main__detail-name {
-                font-family: $title_font;
-                font-size: 22px;
-                font-weight: bold;
-                margin-bottom: 15px;
+    &__detail-name {
+        font-family: $title_font;
+        font-size: 22px;
+        font-weight: bold;
+        margin-bottom: 15px;
 
-                @include tablets {
-                    font-size: 23px;
-                }
-
-                @include desktop {
-                    font-size: 24px;
-                }
-            }
-
-            .main__detail-image {
-                width: 90%;
-                height: 80%;
-                margin-bottom: 15px;
-
-                @include mobile {
-                    width: 80%;
-                    height: 70%;
-                }
-
-                @include tablets {
-                    width: 100%;
-                    height: 100%;
-                }
-
-                @include desktop {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
+        @include tablets {
+            font-size: 23px;
         }
 
-        .main__description {
-            font-family: $content_font;
-            font-size: 19px;
-
-            @include tablets {
-                font-size: 21px;
-            }
-        
-            @include desktop {
-                font-size: 22px;
-            }
-
-            p {
-                margin: 0px;
-            }
-
-            span {
-                text-transform: capitalize;
-            }
-
-            .main__description-field {
-                font-weight: bold;
-            }
-
+        @include desktop {
+            font-size: 24px;
         }
+    }
+
+    &__detail-image {
+        width: 90%;
+        height: 80%;
+        margin-bottom: 15px;
+
+        @include mobile {
+            width: 80%;
+            height: 70%;
+        }
+
+        @include tablets {
+            width: 100%;
+            height: 100%;
+        }
+
+        @include desktop {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    
+    &__description {
+        font-family: $content_font;
+        font-size: 19px;
+
+        @include tablets {
+            font-size: 21px;
+        }
+    
+        @include desktop {
+            font-size: 22px;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        span {
+            text-transform: capitalize;
+        }
+    }
+
+    &__description-field {
+        font-weight: bold;
     }
 }
 
@@ -364,6 +360,7 @@ body {
     align-items: center;
     background-color: rgb(245, 245, 245);
     flex-shrink: 0;
+
     &__google-maps {
         margin-top: 30px;
         margin-bottom: 20px;
@@ -388,28 +385,6 @@ body {
     &__social-media {
         @extend %flex-row;
 
-        .footer__logo {
-            text-decoration: none;
-            justify-content: space-between;
-            padding-left: 1rem;
-            padding-right: 1rem;            
-
-            @include landscape-mobile {
-                padding-left: 1.5rem;
-                padding-right: 1.5rem;  
-            }
-
-            @include tablets {
-                padding-left: 2rem;
-                padding-right: 2rem;  
-            }
-
-            @include desktop {
-                padding-left: 3rem;
-                padding-right: 3rem;
-            }
-        }
-        
         .fab {
             color: black;
             font-size: 1.75rem;
@@ -425,6 +400,28 @@ body {
             @include desktop {
                 font-size: 2.65rem;
             }
+        }
+    }
+  
+    &__logo {
+        text-decoration: none;
+        justify-content: space-between;
+        padding-left: 1rem;
+        padding-right: 1rem;            
+
+        @include landscape-mobile {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;  
+        }
+
+        @include tablets {
+            padding-left: 2rem;
+            padding-right: 2rem;  
+        }
+
+        @include desktop {
+            padding-left: 3rem;
+            padding-right: 3rem;
         }
     }
 
@@ -444,7 +441,5 @@ body {
         @include desktop {
             font-size: 17.5px;
         }
-    }
-    
+    }    
 }
-
